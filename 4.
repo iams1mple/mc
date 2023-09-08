@@ -1,0 +1,12 @@
+Mov dptr,#9000h 
+Movx a,@dptr
+Mov r0,a
+Inc dptr
+Movx a,@dptr
+Xch a,r0
+Movx @dptr,a
+Dec 82h
+Mov a,r0
+Movx @dptr,a
+ Loop : sjmp loop
+End
