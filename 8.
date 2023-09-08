@@ -1,0 +1,10 @@
+Mov r0,#30h
+Mov a,@r0
+Inc r0
+Mov b,@r0
+Mul ab 
+Inc r0
+Mov @r0,a
+Inc r0
+Mov @r0,b
+End
