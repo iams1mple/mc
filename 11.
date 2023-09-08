@@ -1,0 +1,16 @@
+Mov r1,#30h
+Mov a,@r1
+Mov 0f0h,a
+Mul ab
+Mov r3,0f0h
+Mov 0f0h,@r1
+Mul ab
+Mov 50h,a
+Mov r5,0f0h
+Mov 0f0h,@r1
+Mov a,r3
+Mul ab
+Add a,r5
+Mov 51h,a
+Mov 52h,0f0h
+End
