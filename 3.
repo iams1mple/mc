@@ -1,0 +1,10 @@
+Mov r0,#30h
+Mov r1,#40h
+Mov r2,#5
+ Loop : mov a,@r0
+xch a,@r1 
+mov @r0,a
+inc r0
+inc r1
+djnz r2,loop
+end
