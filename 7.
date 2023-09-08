@@ -1,0 +1,13 @@
+Mov r1,#00h
+Mov r0,#30h
+Mov a,@r0
+Inc r0
+Add a,@r0
+Jnc next
+Inc r1
+ Next : inc r0
+Mov @r0,a
+Inc r0
+Mov a,r1
+Mov @r0,a
+End
