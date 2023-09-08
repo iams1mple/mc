@@ -1,0 +1,27 @@
+Mov r0,#30h
+Mov r1,#35h
+Mov r2,#06h
+Mov a,r0
+Cjne a,01,next 
+Sjmp stop 
+ Next : jc bottom_trf 
+ Back : mov a,@r0
+mov @r1,a
+inc r0
+inc r1
+djnz r2,back 
+stop : sjmp stop
+bottom_trf : mov a,r0
+add a,r2
+dec a
+mov r0,a
+mov a,r1
+add a,r2
+dec a
+mov r1,a
+ back1 : mov a,@r0
+mov @r1,a
+dec r0
+dec r1
+djnz r2,back1
+sjmp$
