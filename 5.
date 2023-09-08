@@ -1,0 +1,17 @@
+Mov r2,#6h 
+Loop1 : mov r0,#40h 
+mov r3,#6h 
+ Loop : mov a,@r0
+Inc r0
+Mov 50h,@r0
+cjne a,50h,next
+sjmp next1
+ next : jc next1
+mov @r0,a
+dec r0
+mov @r0,50h
+inc r0
+ next1 : djnz r3,loop
+djnz r2,loop1
+Loop2 : sjmp loop2
+End
