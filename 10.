@@ -1,0 +1,7 @@
+Mov r0,#30h
+Mov a,@r0
+Mov b,a
+Mul ab
+Mov 50h,a
+Mov 51h,b
+End
